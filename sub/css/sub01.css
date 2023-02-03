@@ -1,0 +1,89 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+   }
+
+
+header {
+    position: relative;
+    top: 0;
+    margin-top: 50px;
+}
+
+
+/* 🟡 cont01 */
+.cont01 {
+    padding-top: 60px;
+}
+.cont01 .list {
+    height: 160px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex; /* 바탕도형과 이미지 겹치게 가운데 정렬 */
+    align-items: center;    
+    padding: 0 20px; /* 좌,우 여백간격 */
+    display: flex;
+}
+.cont01 .list figure { /* 이미지크기 맞추기 */
+    width: 102px;
+    height: 124px;
+    border-radius: 10px;
+    overflow: hidden; /* 이미지 숨김처리 */
+    margin: 15px;
+}
+.cont01 .list figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont01 .list .info {
+    margin-left: 11px;
+}
+.cont01 .list .info p {
+    font-size: 14px;
+    margin: 3px 0 20px; /* 글씨간격 */
+}
+.cont01 .info a { /* 버튼 */
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;    
+    background-color: #84478E;
+    color: #fff; 
+    display: block; /* 버튼박스 사이즈가 생긴다 */
+    line-height: 35px;
+    font-size: 14px; 
+    text-align: center;   
+} /* a 요소는 인라인요소이다 디스플레이로 잡아줘야 한다 */
+
+
+ /* 🟡 cont02 */ 
+ .cont02 {
+    padding-top: 50px;
+ }
+.cont02 .list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* 이미지가 아래로 내려감 */
+}
+.cont02 .list .item {/* 브라우저크기에 따라 이미지가 조절됨 */
+    width: calc(100% / 3 - 10px); /* 3등분해서 10px간격주기 */
+    margin-bottom: 25px;
+} 
+.cont02 .list .item figure {
+    height: 160px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.cont02 .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+.cont02 .list .item p {
+    font-size: 14px;
+    margin-top: 10px;
+}

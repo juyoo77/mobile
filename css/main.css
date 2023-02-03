@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+   }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style: none;    
+}
+body {
+    color: #333;
+    line-height: 1;
+    font-family: 'NanumBarunGothic';
+    margin-bottom: 60px; /* 내용이 겹쳐지지 않게 한다 */
+}
+.inner {
+    /* width: calc(100% - 40px); */
+    width: 1280px;
+    margin: 0 auto;
+}
+.title {
+    margin-bottom: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* 🟡 */
+header {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50px;
+}
+header h1 {
+    font-size: 30px;
+}
+header nav ul {
+    display: flex;
+    margin-top: 15px;
+}
+header nav ul li {
+    margin-right: 15px;
+}
+
+
+/* 🟡 main_visual */
+.main_visual {
+   /* width: 430px; */
+   height: 295px;
+   border-radius: 0 0 70px 70px;
+   box-shadow: 0 4px 45px rgba(0, 0, 0, 0.25);
+   position: relative;
+ }
+.main_visual figure { 
+    width: calc(100% - 40px);
+    height: 110px;
+    border-radius: 70px;
+    overflow: hidden;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+.main_visual figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+
+ /* 🟡 cont01 */ 
+.cont01 {
+    padding-top: 60px;
+ }
+.cont01 .list {
+    display: flex;
+    justify-content: space-between;
+}
+.cont01 .list .item {/* 브라우저크기에 따라 이미지가 조절됨 */
+    /* width: calc(100% / 4 - 10px); */
+} 
+.cont01 .list .item figure {
+    height: 160px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.cont01 .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+.cont01 .list .item p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+/* 🟡 cont02 */ 
+.cont02 {
+    padding-top: 50px;    
+}
+.cont02 .list {
+    height: 160px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex; /* 바탕도형과 이미지 겹치게 가운데 정렬 */
+    align-items: center;    
+    padding: 0 20px;
+}
+.cont02 .list figure {
+    width: 102px;
+    height: 124px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 15px;
+}
+.cont02 .list figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont02 .list .info p {
+    font-size: 14px;
+    margin: 3px 0 5px;
+}
+.cont02 .list .info div span {
+    font-size: 14px;
+}
+
+
+/* 🟡 bottom_menu */ 
+.bottom_menu {
+    width: 100%;
+    height: 55px;
+    border-radius: 15px 15px 0 0 ;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+}
+.bottom_menu ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;    
+}
+.bottom_menu ul li a {
+    display: flex;
+}
+
+
+
+/* 🟡 뷰포트 430px 이하일때 스타일 적용 
+화면이 축소될때 '3개에 이미지'만 보이게 하기*/
+@media screen and (max-width: 430px) {
+    .cont01 .list .item {
+        width: calc(100% / 3 - 10px);
+    }
+    .cont01 .list .item:nth-child(4){
+        display: none;
+    }
+}

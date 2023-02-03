@@ -1,0 +1,95 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+   }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style: none;    
+}
+body {
+    color: #333;
+    line-height: 1;
+    font-family: 'NanumBarunGothic';
+    margin-bottom: 60px; /* 내용이 겹쳐지지 않게 한다 */
+}
+.inner {
+    /* width: calc(100% - 40px); */
+    width: 1280px;
+    margin: 0 auto;
+}
+.title {
+    margin-bottom: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title h3 {
+    font-size: 20px;
+}
+
+
+
+
+/* 🟡 */
+header {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 9; /* 써브페이지 이동 */
+}
+header h1 {
+    font-size: 30px;
+}
+header nav ul {
+    display: flex;
+    margin-top: 15px;
+}
+header nav ul li {
+    margin-right: 15px;
+}
+
+
+
+
+/* 🟡 bottom_menu */ 
+.bottom_menu {
+    width: 100%;
+    height: 55px;
+    border-radius: 15px 15px 0 0 ;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+}
+.bottom_menu ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;    
+}
+.bottom_menu ul li a {
+    display: flex;
+}
+
+
+/* 🟡 뷰포트 1280px 이하일때 스타일 적용 */ 
+@media screen and (max-width: 1280px) {
+    .inner {width: calc(100% - 40px)}
+}
